@@ -7,7 +7,7 @@ on:
 
 jobs:
   create-demo-directory:
-    runs-on: ubuntu-latest
+    runs-on: first_runner
 
     steps:
       - name: Checkout repository
