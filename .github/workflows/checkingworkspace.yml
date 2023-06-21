@@ -19,3 +19,6 @@ jobs:
 
       - name: Copy file to runner workspace
         run: cp my_file.txt $RUNNER_WORKSPACE
+
+      - name: Copy file to runner workspace
+        run: pwd $RUNNER_WORKSPACE
