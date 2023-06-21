@@ -1,4 +1,4 @@
-name: Create Demo Directory and Test File
+name: My Workflow
 
 on:
   push:
@@ -6,18 +6,23 @@ on:
       - main
 
 jobs:
-  create-demo-directory:
+  my-job:
     runs-on: self-hosted
-    container:
-      image: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Create demo directory
+      - name: Create Demo Directory
         run: mkdir demo
 
-      - name: Create test.txt file
-        run: touch demo/test.txt
+      - name: Create Test File
+        run: echo "This is a test file." > demo/test.txt
 
+      - name: List Files
+        run: ls demo
+
+      - name: Send Email Notification
+        run: |
+          echo "Job completed successfully!"
+          # Add your email sending command here
