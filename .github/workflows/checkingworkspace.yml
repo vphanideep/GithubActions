@@ -1,0 +1,20 @@
+name: Workspace Example
+
+on: [push]
+
+jobs:
+  my-job:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Print runner workspace
+        run: echo "Runner Workspace: $RUNNER_WORKSPACE"
+
+      - name: List files in runner workspace
+        run: ls $RUNNER_WORKSPACE
+
+      - name: Copy file to runner workspace
+        run: cp my_file.txt $RUNNER_WORKSPACE
