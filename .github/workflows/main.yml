@@ -23,6 +23,4 @@ jobs:
         run: ls demo
 
       - name: Send Email Notification
-        run: |
-          echo "Job completed successfully!"
-          # Add your email sending command here
+        run: pwd $runner_workspace
