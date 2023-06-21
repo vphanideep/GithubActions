@@ -1,0 +1,22 @@
+name: Create Demo Directory and Test File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-demo-directory:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Create demo directory
+        run: mkdir demo
+
+      - name: Create test.txt file
+        run: touch demo/test.txt
+
+  
