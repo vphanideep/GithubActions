@@ -1,26 +1,24 @@
-name: My Workflow
-
-on:
-  push:
-    branches:
-      - main
+name: Workspace and File Creation Example
+on: [push]
 
 jobs:
-  my-job:
-    runs-on: self-hosted
+  build:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Create Demo Directory
-        run: mkdir demo
+      - name: Create and write to a file
+        run: |
+          mkdir mydir
+          echo "Hello, GitHub Actions!" > mydir/myfile.txt
 
-      - name: Create Test File
-        run: echo "This is a test file." > demo/test.txt
+      - name: Display workspace contents
+        run: ls -R
 
-      - name: List Files
-        run: ls demo
-
-      - name: Send Email Notification
-        run: pwd $runner_workspace
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifacts
+          path: mydir
