@@ -1,6 +1,6 @@
 name: Workspace Example
 
-on: [push]
+on:
 
 jobs:
   my-job:
