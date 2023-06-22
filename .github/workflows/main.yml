@@ -1,5 +1,5 @@
 name: Workspace and File Creation Example
-on: [push]
+on: 
 
 jobs:
   build:
