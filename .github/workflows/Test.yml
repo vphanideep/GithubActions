@@ -8,9 +8,6 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v3.5.0
-  my-job:
-    runs-on: ubuntu-latest
-    steps:
       # Your job steps go here
 
       - name: Send Email Notification
