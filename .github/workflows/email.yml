@@ -10,7 +10,7 @@ jobs:
       # Your job steps go here
 
       - name: Send Email Notification
-        uses: ./.github/workflows/send-email-notification
+        uses: ./.github/actions/send-email-notification
         with:
           recipients: team@example.com
           subject: Job Completed
