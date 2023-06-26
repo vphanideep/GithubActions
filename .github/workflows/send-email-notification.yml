@@ -1,0 +1,32 @@
+name: Send Email Notification
+
+inputs:
+  recipients:
+    description: 'Email addresses of the recipients'
+    required: true
+  subject:
+    description: 'Email subject'
+    required: true
+  body:
+    description: 'Email body'
+    required: true
+  attachments:
+    description: 'Attachments'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Send email notification
+      env:
+        SMTP_SERVER: smtp.hostinger.com
+        SMTP_PORT: 465
+        #Requires Authentication: Yes
+        SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+        SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        FROM_EMAIL: support@weirdtechie.com
+      run: |
+        # Use the input values to send the email using your preferred email library or tool
+        # You can access the input values using ${{ inputs.<input_name> }}
+        echo "Sending email notification to ${{ inputs.recipients }} with subject: ${{ inputs.subject }}"
+        # Your email sending logic goes here
+        # Replace this with the command or script that sends the email using your preferred email library or tool
