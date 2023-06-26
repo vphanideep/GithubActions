@@ -8,22 +8,16 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v3.5.0
-  my-job:
-    needs: Pre-deploymentChecks
-    runs-on: ubuntu-latest
-    steps:
-      # Your job steps go here
-
-      - name: Send Email Notification
-        uses: ./.github/workflows/send-email-notification
-        with:
-          recipients: phanideepchoudary@gmail.com
-          subject: Job Completed
-          body: |
-            The job has been completed successfully.
-            Here are the details:
-            - Step 1: Do something
-            - Step 2: Do something else
-          attachments: |
-            path/to/attachment1.txt
-            path/to/attachment2.pdf
+    - name: Send Email Notification
+      uses: ./.github/workflows/send-email-notification
+      with:
+        recipients: phanideepchoudary@gmail.com
+        subject: Job Completed
+        body: |
+          The job has been completed successfully.
+          Here are the details:
+          - Step 1: Do something
+          - Step 2: Do something else
+        attachments: |
+          path/to/attachment1.txt
+          path/to/attachment2.pdf
