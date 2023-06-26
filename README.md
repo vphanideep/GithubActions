@@ -59,11 +59,7 @@ Total: **0**
 
 ### Successful
 
-#### spalsh
 
-- [spalsh/.github/workflows/spalsh.yml](spalsh/.github/workflows/spalsh.yml)
-- [spalsh/config.json](spalsh/config.json)
-- [spalsh/jenkinsfile](spalsh/jenkinsfile)
 
 #### test
 
