@@ -15,7 +15,7 @@ jobs:
           # Your job commands here
 
       - name: Send email notification
-        uses: ./.github/actions/send-email-action
+        uses: ./.github/actions/Email
         with:
           subject: 'Job Completed'
           emailBody: |
