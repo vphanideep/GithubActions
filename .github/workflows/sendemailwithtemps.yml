@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Send email notification
-        uses: ./.github/actions/SendEmailAction
+        uses: vphanideep/SendEmailAction@v1
         with:
           subject: 'Job Completed'
           emailBody: |
