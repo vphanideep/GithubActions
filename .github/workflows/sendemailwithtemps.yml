@@ -11,12 +11,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run your job
-        run: |
-          # Your job commands here
-
       - name: Send email notification
-        uses: ./.github/actions/Email
+        uses: ./.github/actions/Email.yml
         with:
           subject: 'Job Completed'
           emailBody: |
