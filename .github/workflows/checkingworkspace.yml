@@ -1,6 +1,7 @@
 name: Workspace Example
 
 on:
+  workflow_dispatch:
 
 jobs:
   my-job:

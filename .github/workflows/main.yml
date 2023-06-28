@@ -1,5 +1,6 @@
 name: Workspace and File Creation Example
 on: 
+  workflow_dispatch:
 
 jobs:
   build:

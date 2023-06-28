@@ -1,6 +1,8 @@
 name: Send Email on Job Completion
 
-on: [push]
+on: 
+    workflow_dispatch:
+
 
 jobs:
   send_email:
