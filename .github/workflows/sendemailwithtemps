@@ -1,0 +1,26 @@
+name: Send Email on Job Completion
+
+on: 
+
+jobs:
+  send_email:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run your job
+        run: |
+          # Your job commands here
+
+      - name: Send email notification
+        uses: ./.github/actions/send-email-action
+        with:
+          subject: 'Job Completed'
+          emailBody: |
+            The job has been completed successfully.
+            You can add more details here.
+          recipient: phanideepchoudary888@gmail.com
+          senderUsername: phanideepchoudary@gmail.com
+          senderPassword: ${{ secrets.GMAIL_PASSWORD }}
