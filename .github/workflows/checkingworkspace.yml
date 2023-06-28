@@ -1,8 +1,6 @@
 name: Workspace Example
-
 on:
-  workflow_dispatch:
-
+  workflow_dispatch:  
 jobs:
   my-job:
     runs-on: self-hosted
