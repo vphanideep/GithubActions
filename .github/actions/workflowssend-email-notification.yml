@@ -18,12 +18,12 @@ runs:
   steps:
     - name: Send email notification
       env:
-        SMTP_SERVER: smtp.hostinger.com
+        SMTP_SERVER: smtp.gmail.com
         SMTP_PORT: 465
         #Requires Authentication: Yes
         SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
         SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-        FROM_EMAIL: support@weirdtechie.com
+        FROM_EMAIL: phanideepchoudary888@gmail.com
       run: |
         # Use the input values to send the email using your preferred email library or tool
         # You can access the input values using ${{ inputs.<input_name> }}
