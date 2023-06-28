@@ -1,5 +1,6 @@
 name: Send Email Action
-
+on: 
+  workflow_dispatch:
 description: Sends an email using Gmail
 
 inputs:
