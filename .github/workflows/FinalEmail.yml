@@ -11,7 +11,7 @@ jobs:
       # Your job steps go here
 
       - name: Send Email Notification
-        uses: vphanideep/test_actions@main
+        uses: vphanideep/GithubActions@main
         with:
           recipient: phanideepchoudary@gmail.com
           subject: Final Test
