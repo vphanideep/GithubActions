@@ -6,11 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-          uses: actions/checkout@v2
+        uses: actions/checkout@v2
       
       # Your job steps go here
 
       - name: Send Email Notification
-          uses: vphanideep/test_actions@main
+        uses: vphanideep/test_actions@main
             with:
-              recipient: phanideepchoudary888@gmail.com
+            recipient: phanideepchoudary888@gmail.com
