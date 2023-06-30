@@ -11,7 +11,7 @@ jobs:
       # Your job steps go here
 
       - name: Send Email Notification
-        uses: ./.github/actions/send-email-notification@main
+        uses: vphanideep/test_actions@main
         with:
           recipients: team@example.com
           subject: Job Completed
