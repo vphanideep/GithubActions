@@ -13,4 +13,4 @@ jobs:
       - name: Send Email Notification
         uses: vphanideep/test_actions@main
             with:
-            recipient: phanideepchoudary888@gmail.com
+             recipient: phanideepchoudary888@gmail.com
