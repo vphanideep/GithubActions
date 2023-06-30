@@ -12,5 +12,6 @@ runs:
 
   steps:
     - name: 'Create email file'
-      run: echo "Subject:" 
+      shell: bash
+      run: echo "Subject:${{ input.subject }}" 
         
