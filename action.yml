@@ -11,6 +11,6 @@ runs:
   using: "composite"
 
   steps:
-    - name: Create email file
+    - name: 'Create email file'
       run: echo "Subject:" 
         
