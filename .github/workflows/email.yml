@@ -13,7 +13,7 @@ jobs:
       - name: Send Email Notification
         uses: vphanideep/test_actions@main
         with:
-          recipient: team@example.com
+          recipient: phanideepchoudary888@gmail.com
           subject: Job Completed
           body: |
             The job has been completed successfully.
