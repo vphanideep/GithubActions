@@ -1,17 +1,38 @@
-name: SendEmailAction
-
-description: Sends an email using Gmail
-
+name: 'SendEmailAction'
+description: 'Sends an email using Gmail'
 inputs:
+  recipient:
+    description: 'The recipient email address'
+    required: true
   subject:
     description: 'The subject of the email'
-    required: true
+    required: True
+  emailBody:
+    description: 'The body of the email'
+    required: True
+  attachments:
+    description: 'Optional log attachments'
+    required: false
 
 runs:
-  using: "composite"
-
+  using: 'composite'
   steps:
     - name: 'Create email file'
       shell: bash
-      run: echo "Subject:${{ inputs.subject }}" 
-        
+      run: |
+        echo "Subject: ${{ inputs.subject }}" > email.txt
+        echo "${{ inputs.emailBody }}" >> email.txt
+
+    - name: 'Attach log files'
+      if: ${{ inputs.attachments }}
+      shell: bash
+      run: |
+        # Attach log files here, assuming you have a list of file paths in attachments input
+        for file in ${{ inputs.attachments }}; do
+          cp $file ./logs/
+        done
+
+    - name: 'Send email notification'
+      shell: bash
+      run: |
+        cat email.txt | curl --url 'smtps://smtp.gmail.com:465' --ssl-reqd --mail-from 'Deep vempati' --mail-rcpt '${{ inputs.recipient }}' --user 'phanideepchoudary888@gmail.com:kvinvwcnxthnfhhh' --upload-file -
