@@ -1,4 +1,4 @@
-on: 
+on:
   workflow_dispatch:
 
 jobs:
@@ -7,10 +7,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
+
       # Your job steps go here
 
       - name: Send Email Notification
         uses: vphanideep/test_actions@main
-            with:
-             recipient: phanideepchoudary888@gmail.com
+        with:
+          recipient: phanideepchoudary888@gmail.com
