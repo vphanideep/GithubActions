@@ -13,7 +13,7 @@ inputs:
   attachments:
     description: 'Optional log attachments'
     required: false
-  senderPassword:
+  Privatekey:
     description: 'smtp private key of the sender email, try adding passkey in sericts of you repo'
     required: True
   username:
