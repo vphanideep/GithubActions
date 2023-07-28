@@ -13,7 +13,16 @@ inputs:
   attachments:
     description: 'Optional log attachments'
     required: false
-
+  senderPassword:
+    description: 'smtp private key of the sender email, try adding passkey in sericts of you repo'
+    required: True
+  username:
+    description: 'sender username email'
+    required: True
+  senderEmail:  
+    description: 'your email'
+    required: True
+    
 runs:
   using: 'composite'
   steps:
