@@ -21,3 +21,6 @@ jobs:
           recipient: phanideepchoudary888@gmail.com
           senderUsername: phanideepchoudary@gmail.com
           senderPassword: ${{ secrets.GMAIL_PASSWORD }}
+          username: deepu
+          senderEmail: phanideepchoudary888@gmail.com
+          Privatekey: ${{ secrects.GMAILPRAVITEKEY }}
