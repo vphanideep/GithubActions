@@ -38,6 +38,7 @@ runs:
       run: |
         # Attach log files here, assuming you have a list of file paths in attachments input
         for file in ${{ inputs.attachments }}; do
+          mkdir logs
           cp $file ./logs/
         done
 
