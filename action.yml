@@ -35,4 +35,4 @@ runs:
     - name: 'Send email notification'
       shell: bash
       run: |
-        cat email.txt | curl --url 'smtps://smtp.gmail.com:465' --ssl-reqd --mail-from 'Deep vempati' --mail-rcpt '${{ inputs.recipient }}' --user 'phanideepchoudary888@gmail.com:kvinvwcnxthnfhhh' --upload-file -
+        cat email.txt | curl --url 'smtps://smtp.gmail.com:465' --ssl-reqd --mail-from '${{ inputs.username }}' --mail-rcpt '${{ inputs.recipient }}' --user '${{ inputs.senderEmil }}:${{ inputs.Privatekey }}' --upload-file -
