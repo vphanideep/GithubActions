@@ -1,7 +1,7 @@
 name: Send Webex Notification
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
 
 jobs:
   notification:
