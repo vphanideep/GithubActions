@@ -1,0 +1,16 @@
+name: Send Webex Notification
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  notification:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Post message to WxT
+        uses: qsnyder/action-wxt@master
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          ROOMID: ${{ secrets.ROOMID }}
+          MESSAGE: <test>.
