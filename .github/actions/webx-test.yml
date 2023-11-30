@@ -13,4 +13,4 @@ jobs:
         env:
           TOKEN: ${{ secrets.TOKEN }}
           ROOMID: ${{ secrets.ROOMID }}
-          MESSAGE: <test>.
+          MESSAGE: <test>
