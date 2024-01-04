@@ -1,0 +1,24 @@
+name: Script with Runner-2
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-job:
+    runs-on: self-hosted
+    strategy:
+      matrix:
+        runner: [Runner-2]
+
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Add your desired steps here
+      # ...
+
+      - name: Finish
+        run: echo "Process completed on Runner-2"
