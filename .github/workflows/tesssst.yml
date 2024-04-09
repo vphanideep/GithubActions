@@ -1,0 +1,46 @@
+name: NggfFailRate_WorkFLow
+on: workflow_dispatch
+  inputs:
+      Start_Time:
+        description: 'Enter starting "00" hourly value'
+        required: true
+      End_Time:
+        description: 'Enter starting "01" hourly value'
+        required: true
+jobs:
+  nggfFailRate:
+    runs-on: Splash-2
+    env:
+          repoUrl: 'https://github.com.git'
+          homeBranch: 'dev_phani'
+          emailSubject: ''
+          emailBody: ''
+          emailErrorMessage: ''
+          emailBodyFull: ''
+          retStatus: 0
+          userDetails: ''
+          prodUtiServer: 'vhlpnbuut001'
+          preProdUtiServer: 'vhlppbuut001'
+          prodReport: 'prod_report.html'
+          preProdReport: 'preprod_report.html'
+          attachmentsList: 'Detailed_12hr_Reports.html'
+          csvFileStr: ''
+          csvFileList: ''
+          TARGET_SERVER_PROD: ''
+          TARGET_SERVER_COPY: ''
+          awsFlag: 0
+          awsUtilServers: ''
+          awsServers: ''
+          targetDir: ''
+          repCount: '01'
+          Start_Time: "${{ github.event.inputs.Start_Time }}"
+          End_Time: "${{ github.event.inputs.End_Time }}"
+          rundate: $(date +'%Y%m%d')
+          Email_List: 'phanideep.vempati@tavelport.com'
+  steps:
+    - name: checkout
+      run:
+        echo "$Start_Time"
+        echo "End_Time"
+        
+          
