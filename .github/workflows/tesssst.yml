@@ -12,7 +12,7 @@ on:
 
 jobs:
   nggfFailRate:
-    runs-on: Splash-2
+    runs-on: ubuntu-latest
     env:
       repoUrl: 'https://github.com.git'
       homeBranch: 'dev_phani'
